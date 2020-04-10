@@ -1,0 +1,56 @@
+**********************************Car Price Prediction Edureka Techathon 2019******************************
+
+*****Requirements*****
+
+Python 3.6.7 (default, Oct 22 2018, 11:32:17) [GCC 8.2.0]
+Numpy 1.17.0
+Matplotlib 3.0.3
+Pandas 0.25.0
+Sklearn 0.20.3
+statsmodels
+
+*****end*****
+
+
+1. Given Dataset consists of 3390 data rows and total of 18 features.
+
+   Independent Features:  	car_company 	model_ID 	mileage 	engine_power 		registration_date 	fuel 	car_paint_color 	car_type 	feature1 		feature2 	feature3 	feature4 	feature5 	feature6 	feature7 		feature8 	sold_date 	
+	
+   Target Feature: car_price
+
+2. Data Types of variables: 
+	dtypes: bool(8), int64(3), object(7)
+
+3. Conversion of object/Categorical Data Type to Numerical Data Type:
+	i. Using One_Hot_Encoding:
+		By performing One_Hot_Encoding on variables we convert it to Binary Vectors.
+		One_Hot_Encoding is performed on 'car_company', 'fuel', 'car_type' in given dataset.
+       ii. Using Label_Encoding:
+		By performing Label_Encoding on variables we assing labels ranging between 0 to n-1 where n is the n is number of distinct Labels.
+		Label_Encoding is performed on 'model_ID' and 'car_paint_color' in given dataset.
+
+4. Conversion of Date type values:
+	Since we have 'registration_date' and 'sold_date' we can calculate Number of 'used_days'.
+
+5. Handling Missing Values:
+	Since the given dataset doesn't contain any NULL or missing values, this step is skipped.
+
+6. Exploratory Data Analysis:
+	i. In this the car_prices for all cars in given dataset is visualised.
+       ii. Correlation among various features/variables with respect to Target variable is visualisted using Cross Matrix.
+      iii. Histograms for visualising values for all the feature Variables.
+
+**Now our data is ready to feed it to Machine Learning Model**
+
+7. Machine Learning Model development: 
+	i. Since we need to predict Car_Price for given input, it is a continuous data prediction hence we can use "Supervised Learning", So "Multiple Regression Machine Learning Model" should be fine.
+       ii. Seperating Data into Train set for training ML model, and test set for testing our trained model as X_train, X_test, y_train, y_test
+      iii. Using sklearn Library for Linear Regression Model, and train ML model on X_train, y_train.
+       iv. Now, after traing our regressor ML model, we can use it for prediction on X_test, and store prediction in y_pred.
+
+8. Summary of Machine Learning Model.
+	i. This shows the values of coefficients, r2_score and other statistical information.
+
+
+
+	
